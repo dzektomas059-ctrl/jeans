@@ -1,66 +1,31 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800&family=Open+Sans:wght@300;400;500;600;700&display=swap');
-@import "tailwindcss";
+@import 'tailwindcss';
+
+@import './styles/tokens.css';
+@import './styles/base.css';
+@import './styles/animations.css';
+@import './styles/layout.css';
+@import './styles/header.css';
+@import './styles/mega-menu.css';
+@import './styles/hero.css';
+@import './styles/categories.css';
+@import './styles/product-section.css';
+@import './styles/product-card.css';
+@import './styles/promo-banners.css';
+@import './styles/advantages.css';
+@import './styles/brand-story.css';
+@import './styles/stores.css';
+@import './styles/newsletter.css';
+@import './styles/footer.css';
+@import './styles/cart-sidebar.css';
+@import './styles/search-overlay.css';
 
 @theme {
   --color-brand: #c8102e;
   --color-brand-dark: #a00e26;
-  --color-brand-light: #e8142f;
   --color-text: #1a1a1a;
   --color-text-muted: #6b6b6b;
   --color-border: #e5e5e5;
   --color-bg: #ffffff;
-  --color-bg-gray: #f6f6f6;
-  --color-bg-dark: #1a1a1a;
-  --color-accent: #c8102e;
-  --color-sale: #e63535;
-  --color-new: #3a7c3a;
+  --color-bg-cream: #f7f3ec;
 }
-
-*, *::before, *::after {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-body {
-  font-family: 'Open Sans', sans-serif;
-  color: #1a1a1a;
-  background: #ffffff;
-  line-height: 1.5;
-  overflow-x: hidden;
-}
-
-h1, h2, h3, h4, h5, h6 {
-  font-family: 'Raleway', sans-serif;
-}
-
-a {
-  text-decoration: none;
-  color: inherit;
-  transition: color 0.2s ease;
-}
-
-button {
-  cursor: pointer;
-  border: none;
-  background: none;
-  font-family: inherit;
-}
-
-img {
-  max-width: 100%;
-  display: block;
-}
-
-ul {
-  list-style: none;
-}
-
-/* ===== SCROLLBAR ===== */
-::-webkit-scrollbar { width: 6px; }
-::-webkit-scrollbar-track { background: #f1f1f1; }
-::-webkit-scrollbar-thumb { background: #c8102e; border-radius: 3px; }

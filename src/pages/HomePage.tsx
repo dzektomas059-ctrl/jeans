@@ -3,6 +3,8 @@ import HeroBanner from '../components/HeroBanner';
 import CategoryGrid from '../components/CategoryGrid';
 import ProductSection from '../components/ProductSection';
 import PromoBanners from '../components/PromoBanners';
+import BrandStory from '../components/BrandStory';
+import StoresSection from '../components/StoresSection';
 import Advantages from '../components/Advantages';
 import Newsletter from '../components/Newsletter';
 import Footer from '../components/Footer';
@@ -14,10 +16,25 @@ export default function HomePage() {
       <main>
         <HeroBanner />
         <CategoryGrid />
-        <ProductSection title="Новинки" tab="new" />
+        <ProductSection
+          tab="new"
+          title="New arrivals"
+          subtitle="The latest drops, fresh from our atelier"
+          ctaLabel="View all new"
+          ctaHref="/new"
+        />
         <PromoBanners />
-        <ProductSection title="Популярные товары" tab="popular" />
+        <ProductSection
+          tab="popular"
+          title="Best sellers"
+          subtitle="Loved by thousands of customers"
+          ctaLabel="View all best sellers"
+          ctaHref="/best-sellers"
+          soft
+        />
+        <BrandStory />
         <Advantages />
+        <StoresSection />
         <Newsletter />
       </main>
       <Footer />

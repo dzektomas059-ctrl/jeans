@@ -15,7 +15,7 @@ export default function ProductPage() {
     return <NotFound />;
   }
 
-  return <ProductView product={product} navigate={navigate} />;
+  return <ProductView key={product.id} product={product} navigate={navigate} />;
 }
 
 function NotFound() {

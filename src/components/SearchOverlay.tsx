@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
+import { Link } from 'react-router-dom';
 import { useApp } from '../context/useApp';
 import { useScrollLock } from '../hooks/useScrollLock';
 import { useEscapeKey } from '../hooks/useEscapeKey';
@@ -88,7 +89,11 @@ export default function SearchOverlay() {
             <ul className="search__suggestions" role="listbox">
               {suggestions.map((p) => (
                 <li key={p.id}>
-                  <a className="search__suggestion" href={p.href}>
+                  <Link
+                    className="search__suggestion"
+                    to={p.href}
+                    onClick={close}
+                  >
                     <img
                       src={p.image}
                       alt=""
@@ -98,7 +103,7 @@ export default function SearchOverlay() {
                     />
                     <span style={{ flex: 1 }}>{p.name}</span>
                     <strong>€{p.price.toFixed(2)}</strong>
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>

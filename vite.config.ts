@@ -12,5 +12,10 @@ export default defineConfig(async () => {
   } catch {
     /* optional plugin not present */
   }
-  return { plugins };
+
+  // BASE_PATH lets us build for a subpath (e.g. GitHub Pages: /jeans/)
+  // while keeping root-served deployments (devinapps, dev server) working.
+  const base = process.env.BASE_PATH ?? '/';
+
+  return { base, plugins };
 })

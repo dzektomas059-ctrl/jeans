@@ -8,10 +8,15 @@ import SearchOverlay from './components/SearchOverlay';
 import ScrollToTop from './components/ScrollToTop';
 import { AppProvider } from './context/AppContext';
 
+// Vite injects BASE_URL from the `base` config (e.g. "/jeans/" on GH Pages).
+// React Router needs the same value as `basename` (without the trailing slash)
+// so internal `<Link to="/about" />` resolves to `/jeans/about` in production.
+const ROUTER_BASENAME = import.meta.env.BASE_URL.replace(/\/$/, '');
+
 export default function App() {
   return (
     <AppProvider>
-      <BrowserRouter>
+      <BrowserRouter basename={ROUTER_BASENAME}>
         <ScrollToTop />
         <Routes>
           <Route path="/" element={<HomePage />} />

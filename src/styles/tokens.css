@@ -1,0 +1,84 @@
+/* ============================================================
+ * Design tokens — Conte Shop
+ * Inspired by conteshop.com (EU storefront)
+ * ============================================================ */
+
+:root {
+  /* Brand */
+  --brand: #c8102e;
+  --brand-dark: #a00e26;
+  --brand-light: #e8142f;
+  --brand-soft: rgba(200, 16, 46, 0.08);
+
+  /* Surfaces */
+  --bg: #ffffff;
+  --bg-cream: #f7f3ec;
+  --bg-soft: #faf7f2;
+  --bg-muted: #f1ece4;
+  --bg-dark: #1a1a1a;
+  --bg-darker: #111111;
+
+  /* Hero curtain palette (warm beige fabric) */
+  --curtain-1: #c9b48f;
+  --curtain-2: #b29873;
+  --curtain-3: #8d7553;
+  --curtain-shadow: rgba(60, 40, 20, 0.28);
+
+  /* Text */
+  --text: #1a1a1a;
+  --text-strong: #0d0d0d;
+  --text-muted: #6b6b6b;
+  --text-soft: #8a8a8a;
+  --text-inverse: #ffffff;
+
+  /* Borders */
+  --border: #e5e5e5;
+  --border-soft: #efe9df;
+  --border-strong: #d4d4d4;
+
+  /* States */
+  --sale: #e63535;
+  --new: #3a7c3a;
+  --gold: #c4a25a;
+
+  /* Shadows */
+  --shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.04);
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.06);
+  --shadow-md: 0 8px 30px rgba(0, 0, 0, 0.12);
+  --shadow-lg: 0 16px 50px rgba(0, 0, 0, 0.18);
+
+  /* Layout */
+  --container: 1320px;
+  --container-narrow: 1100px;
+  --gutter: clamp(16px, 4vw, 32px);
+  --header-h: 84px;
+  --header-h-scrolled: 64px;
+  --topbar-h: 36px;
+  --radius-xs: 2px;
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 16px;
+  --radius-pill: 999px;
+
+  /* Type */
+  --font-heading: 'Raleway', system-ui, -apple-system, sans-serif;
+  --font-body: 'Open Sans', system-ui, -apple-system, sans-serif;
+
+  /* Motion */
+  --ease-out: cubic-bezier(0.2, 0.7, 0.3, 1);
+  --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-fast: 0.15s var(--ease-out);
+  --transition: 0.25s var(--ease-out);
+  --transition-slow: 0.4s var(--ease-out);
+
+  /* Z-index scale */
+  --z-header: 100;
+  --z-mega: 110;
+  --z-mobile-overlay: 200;
+  --z-mobile-drawer: 210;
+  --z-cart-overlay: 300;
+  --z-cart: 310;
+  --z-search-overlay: 400;
+  --z-search: 410;
+  --z-toast: 500;
+}

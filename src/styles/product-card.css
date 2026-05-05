@@ -1,0 +1,226 @@
+/* ============================================================
+ * Product card
+ * ============================================================ */
+
+.product-card {
+  position: relative;
+  background: #fff;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: var(--shadow-xs);
+  transition: transform var(--transition), box-shadow var(--transition);
+  display: flex;
+  flex-direction: column;
+}
+
+.product-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+
+.product-card__media {
+  position: relative;
+  aspect-ratio: 3 / 4;
+  background: var(--bg-cream);
+  overflow: hidden;
+}
+
+.product-card__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-slow);
+}
+
+.product-card:hover .product-card__img {
+  transform: scale(1.06);
+}
+
+.product-card__badges {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  z-index: 2;
+}
+
+.product-card__wish {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.92);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow-xs);
+  transition: background var(--transition), transform var(--transition);
+  z-index: 2;
+}
+
+.product-card__wish:hover {
+  background: #fff;
+  transform: scale(1.08);
+}
+
+.product-card__wish svg {
+  fill: none;
+  stroke: var(--text-muted);
+  transition: fill var(--transition), stroke var(--transition);
+}
+
+.product-card__wish.is-active svg {
+  fill: var(--brand);
+  stroke: var(--brand);
+}
+
+.product-card__quick {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(255, 255, 255, 0.96);
+  backdrop-filter: blur(2px);
+  padding: 12px;
+  transform: translateY(100%);
+  transition: transform var(--transition);
+  z-index: 2;
+}
+
+.product-card:hover .product-card__quick {
+  transform: translateY(0);
+}
+
+.product-card__sizes {
+  display: flex;
+  gap: 5px;
+  justify-content: center;
+  margin-bottom: 8px;
+  flex-wrap: wrap;
+}
+
+.product-card__size {
+  padding: 4px 10px;
+  border: 1px solid var(--border);
+  background: #fff;
+  border-radius: var(--radius-xs);
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--text);
+  transition: all var(--transition-fast);
+}
+
+.product-card__size:hover {
+  border-color: var(--text-strong);
+  color: var(--text-strong);
+}
+
+.product-card__size.is-selected {
+  background: var(--brand);
+  color: #fff;
+  border-color: var(--brand);
+}
+
+.product-card__add {
+  width: 100%;
+  padding: 10px 12px;
+  background: var(--bg-dark);
+  color: #fff;
+  border-radius: var(--radius-xs);
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 12px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: background var(--transition), transform var(--transition);
+}
+
+.product-card__add:hover {
+  background: var(--brand);
+}
+
+.product-card__add.is-added {
+  background: var(--new);
+}
+
+.product-card__body {
+  padding: 14px 14px 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.product-card__rating {
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+  font-size: 11px;
+  color: var(--text-soft);
+}
+
+.product-card__rating svg {
+  width: 12px;
+  height: 12px;
+}
+
+.product-card__rating .is-on {
+  fill: #f5a623;
+}
+
+.product-card__rating .is-off {
+  fill: var(--border);
+}
+
+.product-card__name {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 1.35;
+  color: var(--text-strong);
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.product-card__name a {
+  color: inherit;
+  transition: color var(--transition-fast);
+}
+
+.product-card__name a:hover {
+  color: var(--brand);
+}
+
+.product-card__price-row {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-top: 4px;
+}
+
+.product-card__price {
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-size: 17px;
+  color: var(--text-strong);
+}
+
+.product-card__price.is-discounted {
+  color: var(--brand);
+}
+
+.product-card__old {
+  font-size: 13px;
+  color: var(--text-soft);
+  text-decoration: line-through;
+}

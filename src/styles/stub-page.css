@@ -1,0 +1,204 @@
+/* ============================================================
+ * Stub page — used for routes without dedicated content yet
+ * ============================================================ */
+
+.stub-page {
+  background: var(--bg);
+  padding-bottom: 100px;
+  min-height: 60vh;
+}
+
+.stub-page__inner {
+  padding-top: 8px;
+}
+
+.stub-page__title {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: clamp(32px, 4vw, 48px);
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: var(--text-strong);
+  margin: 12px 0 12px;
+}
+
+.stub-page__lead {
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--text-muted);
+  max-width: 780px;
+  margin: 0 0 28px;
+}
+
+.stub-page__cta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 60px;
+}
+
+.stub-page__btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  border: 0;
+  cursor: pointer;
+  font: inherit;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  font-size: 13px;
+  padding: 14px 28px;
+  transition: background var(--transition-fast),
+    border-color var(--transition-fast), color var(--transition-fast);
+}
+
+.stub-page__btn--primary {
+  background: var(--text-strong);
+  color: var(--text-inverse);
+}
+
+.stub-page__btn--primary:hover {
+  background: var(--bg-darker);
+}
+
+.stub-page__btn--ghost {
+  background: transparent;
+  color: var(--text);
+  border: 1px solid var(--border-strong);
+}
+
+.stub-page__btn--ghost:hover {
+  border-color: var(--text-strong);
+  background: var(--bg-soft);
+}
+
+/* Contact / legal block (used on /about, /contact) */
+
+.stub-page__contact {
+  margin: 8px 0 56px;
+  padding: 36px 0;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+.stub-page__contact-title {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 22px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--text-strong);
+  margin: 0 0 24px;
+}
+
+.stub-page__contact-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.stub-page__contact-card {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 24px;
+  background: var(--bg-soft);
+  border-radius: var(--radius-md);
+}
+
+.stub-page__contact-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--bg);
+  color: var(--brand);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 6px;
+}
+
+.stub-page__contact-card h3 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin: 0;
+}
+
+.stub-page__contact-link {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--text-strong);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+.stub-page__contact-link:hover {
+  color: var(--brand);
+}
+
+.stub-page__contact-card p {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--text-muted);
+}
+
+.stub-page__contact-strong {
+  font-weight: 600;
+  color: var(--text-strong) !important;
+}
+
+.stub-page__grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+  border-top: 1px solid var(--border);
+  padding-top: 36px;
+}
+
+.stub-page__feature {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 26px;
+  background: var(--bg-soft);
+  border-radius: var(--radius-md);
+}
+
+.stub-page__feature-icon {
+  width: 48px;
+  height: 48px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg);
+  border-radius: 50%;
+  color: var(--brand);
+  margin-bottom: 6px;
+}
+
+.stub-page__feature h3 {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 17px;
+  margin: 0;
+}
+
+.stub-page__feature p {
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--text-muted);
+  margin: 0;
+}
+
+@media (max-width: 800px) {
+  .stub-page__grid,
+  .stub-page__contact-grid {
+    grid-template-columns: 1fr;
+  }
+}

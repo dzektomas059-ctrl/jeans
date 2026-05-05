@@ -7,9 +7,16 @@ interface StubPageProps {
   title?: string;
   description?: string;
   ctaToJeans?: boolean;
+  /** When true, render a contact / legal info block (used for /about, /contact) */
+  showContact?: boolean;
 }
 
-export default function StubPage({ title, description, ctaToJeans = true }: StubPageProps) {
+export default function StubPage({
+  title,
+  description,
+  ctaToJeans = true,
+  showContact = false,
+}: StubPageProps) {
   const navigate = useNavigate();
   const { pathname } = useLocation();
 
@@ -73,6 +80,50 @@ export default function StubPage({ title, description, ctaToJeans = true }: Stub
               Back to home
             </button>
           </div>
+
+          {showContact && (
+            <section className="stub-page__contact" aria-label="Контактная информация">
+              <h2 className="stub-page__contact-title">Контактная информация</h2>
+              <div className="stub-page__contact-grid">
+                <div className="stub-page__contact-card">
+                  <div className="stub-page__contact-icon">
+                    <Icon name="phone" size={20} />
+                  </div>
+                  <h3>Телефон</h3>
+                  <a
+                    className="stub-page__contact-link"
+                    href="tel:+375291218648"
+                  >
+                    +375 (29) 121-86-48
+                  </a>
+                  <p>Пн–Пт 9:00 – 18:00</p>
+                </div>
+                <div className="stub-page__contact-card">
+                  <div className="stub-page__contact-icon">
+                    <Icon name="mail" size={20} />
+                  </div>
+                  <h3>Email</h3>
+                  <a
+                    className="stub-page__contact-link"
+                    href="mailto:hello@conteshop.com"
+                  >
+                    hello@conteshop.com
+                  </a>
+                  <p>Ответим в течение 24 часов</p>
+                </div>
+                <div className="stub-page__contact-card">
+                  <div className="stub-page__contact-icon">
+                    <Icon name="pin" size={20} />
+                  </div>
+                  <h3>Реквизиты</h3>
+                  <p className="stub-page__contact-strong">
+                    ИП Полякова Светлана Александровна
+                  </p>
+                  <p>Адрес: Могилевская область</p>
+                </div>
+              </div>
+            </section>
+          )}
 
           <div className="stub-page__grid">
             <div className="stub-page__feature">

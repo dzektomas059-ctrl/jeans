@@ -178,9 +178,9 @@ function TopBar({ lang, setLang }: { lang: Lang; setLang: (l: Lang) => void }) {
   return (
     <div className="topbar">
       <div className="container topbar__inner">
-        <a href="tel:+48500503636" className="topbar__phone">
+        <a href="tel:+375291218648" className="topbar__phone">
           <Icon name="phone" size={12} />
-          +48 500 503 636
+          +375 (29) 121-86-48
         </a>
 
         <div className="topbar__links">
@@ -424,9 +424,9 @@ function MobileDrawer({
         </nav>
 
         <div className="mobile-drawer__foot">
-          <a href="tel:+48500503636" className="mobile-drawer__phone">
+          <a href="tel:+375291218648" className="mobile-drawer__phone">
             <Icon name="phone" size={16} />
-            +48 500 503 636
+            +375 (29) 121-86-48
           </a>
           <div className="mobile-drawer__lang">
             {(['EN', 'PL'] as const).map((value) => (

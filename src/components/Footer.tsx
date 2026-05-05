@@ -14,9 +14,9 @@ export default function Footer() {
               Comfort, fit and style for every day.
             </p>
             <div className="footer__contacts">
-              <a href="tel:+48500503636" className="footer__contact">
+              <a href="tel:+375291218648" className="footer__contact">
                 <Icon name="phone" size={16} />
-                +48 500 503 636
+                +375 (29) 121-86-48
               </a>
               <a href="mailto:hello@conteshop.com" className="footer__contact">
                 <Icon name="mail" size={16} />
@@ -26,6 +26,11 @@ export default function Footer() {
                 <Icon name="clock" size={16} />
                 Mon–Fri 9:00 – 18:00 CET
               </span>
+            </div>
+
+            <div className="footer__legal">
+              <p className="footer__legal-title">ИП Полякова Светлана Александровна</p>
+              <p className="footer__legal-text">Адрес: Могилевская область</p>
             </div>
           </div>
 
@@ -78,7 +83,7 @@ export default function Footer() {
       <div className="footer__copy">
         <div className="container footer__copy-inner">
           <span className="footer__copy-text">
-            © {new Date().getFullYear()} Conte. All rights reserved.
+            © 2026 ИП Полякова С.А. Все права защищены.
           </span>
           <div className="footer__copy-links">
             <Link to="/terms">Terms</Link>

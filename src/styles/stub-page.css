@@ -73,6 +73,86 @@
   background: var(--bg-soft);
 }
 
+/* Contact / legal block (used on /about, /contact) */
+
+.stub-page__contact {
+  margin: 8px 0 56px;
+  padding: 36px 0;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+.stub-page__contact-title {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 22px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--text-strong);
+  margin: 0 0 24px;
+}
+
+.stub-page__contact-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.stub-page__contact-card {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 24px;
+  background: var(--bg-soft);
+  border-radius: var(--radius-md);
+}
+
+.stub-page__contact-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--bg);
+  color: var(--brand);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 6px;
+}
+
+.stub-page__contact-card h3 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin: 0;
+}
+
+.stub-page__contact-link {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--text-strong);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+.stub-page__contact-link:hover {
+  color: var(--brand);
+}
+
+.stub-page__contact-card p {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--text-muted);
+}
+
+.stub-page__contact-strong {
+  font-weight: 600;
+  color: var(--text-strong) !important;
+}
+
 .stub-page__grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -117,7 +197,8 @@
 }
 
 @media (max-width: 800px) {
-  .stub-page__grid {
+  .stub-page__grid,
+  .stub-page__contact-grid {
     grid-template-columns: 1fr;
   }
 }

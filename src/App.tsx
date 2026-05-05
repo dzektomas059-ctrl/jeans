@@ -81,8 +81,9 @@ export default function App() {
             path="/about"
             element={
               <StubPage
-                title="About us"
-                description="Conte is a European brand crafting premium hosiery and clothing since 1974."
+                title="О нас"
+                description="Мы — ИП Полякова С.А. Специализируемся на продаже женских джинсов премиум-качества. Работаем из Могилёвской области и отправляем заказы по всей Беларуси."
+                showContact
               />
             }
           />
@@ -126,8 +127,9 @@ export default function App() {
             path="/contact"
             element={
               <StubPage
-                title="Contact"
-                description="Reach our customer care team via phone, email or social media."
+                title="Контакты"
+                description="Свяжитесь с нами по телефону, email или в социальных сетях. Наша команда поможет с выбором модели, размера и оформлением заказа."
+                showContact
               />
             }
           />

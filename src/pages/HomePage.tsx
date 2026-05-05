@@ -20,8 +20,8 @@ export default function HomePage() {
           tab="new"
           title="New arrivals"
           subtitle="The latest drops, fresh from our atelier"
-          ctaLabel="View all new"
-          ctaHref="/new"
+          ctaLabel="View all jeans"
+          ctaHref="/jeans?new=1"
         />
         <PromoBanners />
         <ProductSection
@@ -29,7 +29,7 @@ export default function HomePage() {
           title="Best sellers"
           subtitle="Loved by thousands of customers"
           ctaLabel="View all best sellers"
-          ctaHref="/best-sellers"
+          ctaHref="/jeans"
           soft
         />
         <BrandStory />

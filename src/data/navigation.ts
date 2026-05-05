@@ -32,7 +32,7 @@ export const navItems: NavItem[] = [
         {
           title: 'New',
           links: [
-            { label: 'Jeans', href: '/women/new/jeans' },
+            { label: 'Jeans', href: '/jeans?new=1' },
             { label: 'Lingerie', href: '/women/new/lingerie' },
             { label: 'Socks', href: '/women/new/socks' },
             { label: 'Face masks', href: '/women/new/masks' },
@@ -117,13 +117,16 @@ export const navItems: NavItem[] = [
         {
           title: 'Jeans',
           links: [
-            { label: 'Straight Cut', href: '/women/jeans/straight' },
-            { label: 'Mom Fit', href: '/women/jeans/mom-fit' },
-            { label: 'High rise', href: '/women/jeans/high-rise' },
-            { label: 'Plus Size', href: '/women/jeans/plus-size' },
-            { label: 'Colored', href: '/women/jeans/colored' },
-            { label: 'Push Up', href: '/women/jeans/push-up' },
-            { label: 'Mid rise', href: '/women/jeans/mid-rise' },
+            { label: 'Straight Cut', href: '/jeans?fit=Straight' },
+            { label: 'Mom Fit', href: '/jeans?fit=Mom' },
+            { label: 'High rise', href: '/jeans?rise=high' },
+            { label: 'Plus Size', href: '/jeans?design=Plus%20Size' },
+            { label: 'Colored', href: '/jeans?colored=1' },
+            { label: 'Push Up', href: '/jeans?fit=Skinny' },
+            { label: 'Mid rise', href: '/jeans?rise=mid' },
+            { label: 'Wide leg', href: '/jeans?fit=Wide%20leg' },
+            { label: 'Flared', href: '/jeans?fit=Flared' },
+            { label: 'Loose', href: '/jeans?fit=Loose' },
           ],
         },
         {
@@ -131,7 +134,7 @@ export const navItems: NavItem[] = [
           color: 'brand',
           links: [
             { label: 'Clothing', href: '/sale/women/clothing' },
-            { label: 'Jeans', href: '/sale/women/jeans' },
+            { label: 'Jeans', href: '/jeans?sale=1' },
             { label: 'Leggings', href: '/sale/women/leggings' },
             { label: 'Lingerie', href: '/sale/women/lingerie' },
             { label: 'Tights', href: '/sale/women/tights' },
@@ -180,7 +183,7 @@ export const navItems: NavItem[] = [
         {
           title: 'New',
           links: [
-            { label: 'Jeans', href: '/men/new/jeans' },
+            { label: 'Jeans', href: '/jeans?cat=men' },
             { label: 'Pants', href: '/men/new/pants' },
           ],
         },
@@ -221,7 +224,7 @@ export const navItems: NavItem[] = [
           title: 'Sale',
           color: 'brand',
           links: [
-            { label: 'Jeans', href: '/sale/men/jeans' },
+            { label: 'Jeans', href: '/jeans?cat=men&sale=1' },
             { label: 'Socks', href: '/sale/men/socks' },
             { label: 'Pants', href: '/sale/men/pants' },
             { label: 'Thermo underwear', href: '/sale/men/thermo' },

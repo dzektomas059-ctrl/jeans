@@ -19,6 +19,12 @@
 @import './styles/footer.css';
 @import './styles/cart-sidebar.css';
 @import './styles/search-overlay.css';
+@import './styles/breadcrumbs.css';
+@import './styles/catalog.css';
+@import './styles/jeans-card.css';
+@import './styles/quick-view.css';
+@import './styles/product-page.css';
+@import './styles/stub-page.css';
 
 @theme {
   --color-brand: #c8102e;

@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import Icon from './Icon';
 import { stores } from '../data/stores';
 
@@ -26,10 +27,10 @@ export default function StoresSection() {
         </div>
 
         <div style={{ textAlign: 'center', marginTop: '24px' }}>
-          <a href="/stores" className="stores__map-link">
+          <Link to="/store-availability" className="stores__map-link">
             <Icon name="pin" size={16} />
             Find a store near you
-          </a>
+          </Link>
         </div>
       </div>
     </section>

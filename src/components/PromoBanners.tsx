@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import Icon from './Icon';
 
 export default function PromoBanners() {
@@ -5,7 +6,7 @@ export default function PromoBanners() {
     <section className="section" aria-label="Featured promotions">
       <div className="container">
         <div className="promo-banners__grid">
-          <a href="/sale" className="promo-banner">
+          <Link to="/jeans?sale=1" className="promo-banner">
             <img src="/images/banner1.jpg" alt="" className="promo-banner__img" loading="lazy" />
             <div className="promo-banner__overlay promo-banner__overlay--brand" />
             <div className="promo-banner__content">
@@ -22,10 +23,10 @@ export default function PromoBanners() {
                 <Icon name="arrow-right" size={14} />
               </span>
             </div>
-          </a>
+          </Link>
 
           <div className="promo-banners__col">
-            <a href="/collections/romance" className="promo-banner promo-banner--soft">
+            <Link to="/jeans?fit=Wide%20leg" className="promo-banner promo-banner--soft">
               <img src="/images/banner2.jpg" alt="" className="promo-banner__img" loading="lazy" />
               <div className="promo-banner__overlay" />
               <div className="promo-banner__content">
@@ -39,9 +40,9 @@ export default function PromoBanners() {
                   <Icon name="arrow-right" size={14} />
                 </span>
               </div>
-            </a>
+            </Link>
 
-            <a href="/collections/sport" className="promo-banner">
+            <Link to="/jeans?fit=Loose" className="promo-banner">
               <img src="/images/cat3.jpg" alt="" className="promo-banner__img" loading="lazy" />
               <div className="promo-banner__overlay promo-banner__overlay--dark" />
               <div className="promo-banner__content">
@@ -55,7 +56,7 @@ export default function PromoBanners() {
                   <Icon name="arrow-right" size={14} />
                 </span>
               </div>
-            </a>
+            </Link>
           </div>
         </div>
       </div>

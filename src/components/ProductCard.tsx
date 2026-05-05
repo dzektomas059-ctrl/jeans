@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { useApp } from '../context/useApp';
 import type { Product } from '../data/products';
 import Icon from './Icon';
@@ -109,7 +110,7 @@ export default function ProductCard({ product }: Props) {
       <div className="product-card__body">
         <Stars rating={product.rating} reviews={product.reviews} />
         <h3 className="product-card__name">
-          <a href={product.href}>{product.name}</a>
+          <Link to={product.href}>{product.name}</Link>
         </h3>
         <div className="product-card__price-row">
           <span

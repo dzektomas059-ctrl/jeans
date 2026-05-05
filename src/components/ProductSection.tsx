@@ -1,4 +1,5 @@
 import { useMemo, useState } from 'react';
+import { Link } from 'react-router-dom';
 import { products } from '../data/products';
 import ProductCard from './ProductCard';
 import Icon from './Icon';
@@ -45,10 +46,10 @@ export default function ProductSection({
           </div>
 
           <div className="product-section__nav">
-            <a href={ctaHref} className="section-link">
+            <Link to={ctaHref || '/jeans'} className="section-link">
               {ctaLabel}
               <Icon name="arrow-right" size={16} />
-            </a>
+            </Link>
             <div className="product-section__pager">
               <button
                 type="button"

@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import type { ReactNode } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 import { useApp } from '../context/useApp';
 import { useScrolled } from '../hooks/useScrolled';
 import { useScrollLock } from '../hooks/useScrollLock';
@@ -15,6 +16,7 @@ export default function Header() {
   const [mobileExpanded, setMobileExpanded] = useState<number | null>(null);
   const [lang, setLang] = useState<Lang>('EN');
   const scrolled = useScrolled(40);
+  const navigate = useNavigate();
   const closeTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   useScrollLock(mobileOpen);
@@ -70,9 +72,9 @@ export default function Header() {
             <span className="burger__bar" />
           </button>
 
-          <a href="/" className="header__brand" aria-label="Conte home">
+          <Link to="/" className="header__brand" aria-label="Conte home">
             CONTE
-          </a>
+          </Link>
 
           <nav className="nav" aria-label="Main">
             {navItems.map((item, idx) => {
@@ -85,8 +87,8 @@ export default function Header() {
                   onMouseEnter={() => hasMega && handleNavEnter(idx)}
                   onMouseLeave={() => hasMega && handleNavLeave()}
                 >
-                  <a
-                    href={item.href}
+                  <Link
+                    to={item.href}
                     className={`nav__link${item.accent ? ' nav__link--accent' : ''}`}
                   >
                     {item.label}
@@ -95,7 +97,7 @@ export default function Header() {
                         <Icon name="chevron-down" size={12} />
                       </span>
                     )}
-                  </a>
+                  </Link>
                   {hasMega && isActive && (
                     <MegaMenu
                       onMouseEnter={handleMegaEnter}
@@ -124,6 +126,7 @@ export default function Header() {
               type="button"
               className="icon-btn"
               aria-label="Account"
+              onClick={() => navigate('/account')}
             >
               <Icon name="user" size={20} />
             </button>
@@ -132,6 +135,7 @@ export default function Header() {
               type="button"
               className="icon-btn"
               aria-label={`Wishlist (${wishlist.length})`}
+              onClick={() => navigate('/wishlist')}
             >
               <Icon name="heart" size={20} />
               {wishlist.length > 0 && (
@@ -180,21 +184,21 @@ function TopBar({ lang, setLang }: { lang: Lang; setLang: (l: Lang) => void }) {
         </a>
 
         <div className="topbar__links">
-          <a className="topbar__link" href="/about">
+          <Link className="topbar__link" to="/about">
             About us
-          </a>
-          <a className="topbar__link" href="/how-to-order">
+          </Link>
+          <Link className="topbar__link" to="/how-to-order">
             How to order
-          </a>
-          <a className="topbar__link" href="/delivery">
+          </Link>
+          <Link className="topbar__link" to="/delivery">
             Delivery
-          </a>
-          <a className="topbar__link" href="/payment">
+          </Link>
+          <Link className="topbar__link" to="/payment">
             Payment
-          </a>
-          <a className="topbar__link" href="/returns">
+          </Link>
+          <Link className="topbar__link" to="/returns">
             Return and refunds
-          </a>
+          </Link>
 
           <div className="topbar__lang" role="group" aria-label="Language">
             {(['EN', 'PL'] as const).map((value) => (
@@ -244,9 +248,9 @@ function MegaMenu({ cols, promos, onMouseEnter, onMouseLeave }: MegaProps) {
               <ul className="mega__list">
                 {col.links.map((link) => (
                   <li key={link.label}>
-                    <a href={link.href} className={link.accent ? 'is-accent' : undefined}>
+                    <Link to={link.href} className={link.accent ? 'is-accent' : undefined}>
                       {link.label}
-                    </a>
+                    </Link>
                   </li>
                 ))}
               </ul>
@@ -257,9 +261,9 @@ function MegaMenu({ cols, promos, onMouseEnter, onMouseLeave }: MegaProps) {
         {promos && promos.length > 0 && (
           <div className="mega__promos">
             {promos.map((promo) => (
-              <a
+              <Link
                 key={promo.title}
-                href={promo.href}
+                to={promo.href}
                 className={`mega__promo${
                   promo.variant === 'light' ? ' mega__promo--light' : ''
                 }`}
@@ -280,7 +284,7 @@ function MegaMenu({ cols, promos, onMouseEnter, onMouseLeave }: MegaProps) {
                     dangerouslySetInnerHTML={{ __html: promo.title }}
                   />
                 </div>
-              </a>
+              </Link>
             ))}
           </div>
         )}
@@ -379,9 +383,9 @@ function MobileDrawer({
             return (
               <div key={item.label}>
                 <div className="mobile-drawer__row">
-                  <a className="mobile-drawer__link" href={item.href}>
+                  <Link className="mobile-drawer__link" to={item.href} onClick={onClose}>
                     {item.label}
-                  </a>
+                  </Link>
                   {hasMega && (
                     <button
                       type="button"
@@ -399,15 +403,16 @@ function MobileDrawer({
                       <div key={col.title} className="mobile-drawer__panel-col">
                         <div className="mobile-drawer__panel-title">{col.title}</div>
                         {col.links.map((link) => (
-                          <a
+                          <Link
                             key={link.label}
-                            href={link.href}
+                            to={link.href}
+                            onClick={onClose}
                             className={`mobile-drawer__panel-link${
                               link.accent ? ' mobile-drawer__panel-link--accent' : ''
                             }`}
                           >
                             {link.label}
-                          </a>
+                          </Link>
                         ))}
                       </div>
                     ))}

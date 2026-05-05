@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
+import { Link } from 'react-router-dom';
 import { heroSlides } from '../data/heroSlides';
 import Icon from './Icon';
 
@@ -59,13 +60,13 @@ export default function HeroBanner() {
                   <h1 className="hero__title">{slide.title}</h1>
                   <p className="hero__subtitle">{slide.subtitle}</p>
                   <div className="hero__cta">
-                    <a className="btn btn--primary btn--lg" href={slide.cta.href}>
+                    <Link className="btn btn--primary btn--lg" to={slide.cta.href}>
                       {slide.cta.label}
                       <Icon name="arrow-right" size={16} />
-                    </a>
-                    <a className="btn btn--ghost-light btn--lg" href={slide.secondary.href}>
+                    </Link>
+                    <Link className="btn btn--ghost-light btn--lg" to={slide.secondary.href}>
                       {slide.secondary.label}
-                    </a>
+                    </Link>
                   </div>
                 </div>
               </div>

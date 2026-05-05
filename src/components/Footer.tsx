@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { footerColumns, paymentMethods } from '../data/footer';
 import Icon from './Icon';
 
@@ -34,7 +35,11 @@ export default function Footer() {
               <ul className="footer__col-list">
                 {col.links.map((link) => (
                   <li key={link.label}>
-                    <a href={link.href}>{link.label}</a>
+                    {link.href.startsWith('/') ? (
+                      <Link to={link.href}>{link.label}</Link>
+                    ) : (
+                      <a href={link.href}>{link.label}</a>
+                    )}
                   </li>
                 ))}
               </ul>
@@ -76,10 +81,10 @@ export default function Footer() {
             © {new Date().getFullYear()} Conte. All rights reserved.
           </span>
           <div className="footer__copy-links">
-            <a href="/terms">Terms</a>
-            <a href="/privacy">Privacy</a>
-            <a href="/cookies">Cookies</a>
-            <a href="/sitemap">Sitemap</a>
+            <Link to="/terms">Terms</Link>
+            <Link to="/privacy">Privacy</Link>
+            <Link to="/cookies">Cookies</Link>
+            <Link to="/sitemap">Sitemap</Link>
           </div>
         </div>
       </div>

@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import Icon from './Icon';
 
 export default function BrandStory() {
@@ -34,10 +35,10 @@ export default function BrandStory() {
             </div>
           </div>
 
-          <a href="/about" className="btn btn--ghost brand-story__cta">
+          <Link to="/about" className="btn btn--ghost brand-story__cta">
             Learn more
             <Icon name="arrow-right" size={16} />
-          </a>
+          </Link>
         </div>
       </div>
     </section>
